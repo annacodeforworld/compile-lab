@@ -1141,7 +1141,7 @@ yyreduce:
     {
   case 2: /* lines: lines expr ';'  */
 #line 26 "in_to_post.y"
-                               { printf("Result: %s\n", yyvsp[-1]); }
+                               { printf("%s\n", yyvsp[-1]); }
 #line 1146 "in_to_posty.tab.c"
     break;
 
@@ -1392,27 +1392,29 @@ int yylex() {
             // 忽略空白符号，存在问题！
         } else if (isalpha(t)) {
             // 识别数字或字母
-            char buffer[100];
-            int index = 0;
+            char s[100];
+            int len = 0;
             while (isalnum(t)) {
-                buffer[index++] = t;
+                s[len++] = t;
                 t = getchar();
             }
-            buffer[index] = '\0';
+            s[len] = '\0';
             ungetc(t, stdin);//读入的最后一个字符放回输入流
-            yylval = strdup(buffer);
+            yylval = (char*)malloc(100 * sizeof(char));
+            strcpy(yylval, s);
             return ID;
         } else if (isdigit(t)) {
             // 识别数字或字母
-            char buffer[100];
-            int index = 0;
+            char s[100];
+            int len = 0;
             while (isdigit(t)) {
-                buffer[index++] = t;
+                s[len++] = t;
                 t = getchar();
             }
-            buffer[index] = '\0';
+            s[len] = '\0';
             ungetc(t, stdin);//读入的最后一个字符放回输入流
-            yylval = strdup(buffer);
+            yylval = (char*)malloc(100 * sizeof(char));
+            strcpy(yylval, s);
             return ID;
         }else if (t == '+') {
             return ADD;

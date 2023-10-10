@@ -30,7 +30,7 @@ void myinsert(char *name, double value);
 
 %%
 
-lines   :       lines expr ';' { printf("Result: %f\n", $2.val); }
+lines   :       lines expr ';' { printf("%f\n", $2.val); }
         |       lines ';'
         |
         ;
@@ -112,16 +112,16 @@ int yylex() {
             return RIGHT_BR;
         } else if (isalpha(t)) {
             // 识别数字或字母
-            char buffer[100];
-            int index = 0;
+            char s[100];
+            int len = 0;
             while (isalnum(t)) {
-                buffer[index++] = t;
+                s[len++] = t;
                 t = getchar();
             }
-            buffer[index] = '\0';
+            s[len] = '\0';
             ungetc(t, stdin);//读入的最后一个字符放回输入流
             yylval.idname = (char*)malloc(100 * sizeof(char));
-            strcpy(yylval.idname, buffer);
+            strcpy(yylval.idname, s);
             return ID;
         } else if (t == '=') {
             return ASSIGN;

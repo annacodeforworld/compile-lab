@@ -1416,38 +1416,35 @@ yyreturnlab:
 
 #define MAXN 1001
 
-struct {
-    char *name;
-    double value;
-} symtab[MAXN];
+tty symtab[MAXN];
 //定义能容纳1001个标识符的符号表
 
 int cnt=0;
 //当前使用多少个符号
 
-double mysearch(char *name) {
+double mysearch(char *idname) {
     for (int i=0; i<cnt; i++) {
-        if (strcmp(symtab[i].name, name) == 0) {
-            return symtab[i].value;
+        if (strcmp(symtab[i].idname, idname) == 0) {
+            return symtab[i].val;
         }//找到这个符号 返回它的值
     }
     yyerror("Variable not found");//没找到 使用yyerror报错
     return 0.00;
 }   
 
-void myinsert(char *name, double value) {
+void myinsert(char *idname, double val) {
     for (int i=0; i<cnt; i++) {
-        if (strcmp(symtab[i].name, name) == 0) {
-            symtab[i].value = value;
+        if (strcmp(symtab[i].idname, idname) == 0) {
+            symtab[i].val = val;
             return;
         }//存在这个符号，直接重新覆盖原来的值
     }
     if (cnt == MAXN) {
-        yyerror("Symbol table full");//符号表无空间
+        yyerror("Symbol table has already been full");//符号表无空间
     }
-    symtab[cnt].name = (char*)malloc(100 * sizeof(char));
-    strcpy(symtab[cnt].name, name);
-    symtab[cnt].value = value;
+    symtab[cnt].idname = (char*)malloc(100 * sizeof(char));
+    strcpy(symtab[cnt].idname, idname);
+    symtab[cnt].val = val;
     cnt++;
 }
 

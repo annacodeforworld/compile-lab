@@ -1183,7 +1183,7 @@ yyreduce:
 
   case 8: /* expr: expr DIV expr  */
 #line 41 "expr_cal.y"
-                                { yyval.val = yyvsp[-2].val / yyvsp[0].val; }
+                                { if(yyvsp[0].val==0) yyerror("can't be 0"); yyval.val = yyvsp[-2].val / yyvsp[0].val; }
 #line 1188 "expr_caly.tab.c"
     break;
 

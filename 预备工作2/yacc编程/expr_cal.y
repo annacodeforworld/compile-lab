@@ -38,7 +38,7 @@ lines   :       lines expr ';' { printf("%f\n", $2.val); }
 expr    :       expr ADD expr   { $$.val = $1.val + $3.val; } // 加法 a+b
         |       expr MINUS expr { $$.val = $1.val - $3.val; } // 减法a-b
         |       expr MUL expr   { $$.val = $1.val * $3.val; } // 乘法a*b
-        |       expr DIV expr   { $$.val = $1.val / $3.val; } // 除法a/b
+        |       expr DIV expr   { if($3.val==0) yyerror("can't be 0"); $$.val = $1.val / $3.val; } // 除法a/b
         |       LEFT_BR expr RIGHT_BR { $$.val = $2.val; } // 括号(a)
         |       NUMBER  { $$.val = $1.val; } //数值
         |       ID { $$.val = mysearch($1.idname); } //标识符代表的值

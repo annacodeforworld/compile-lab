@@ -1,0 +1,14 @@
+program
+    Sequence
+        ConstDeclineStmt
+            ConstIdList
+                ConstId    name: a    scope: 0    type: int
+                AssignStmt
+                    ConstId    name: a    scope: 0    type: int
+                    IntegerLiteral    value: 10    type: int
+        FunctionDefine    function name: main    type: int()
+            CompoundStmt
+                ReturnStmt
+                    BinaryExpr    op: div
+                        Id    name: a    scope: 0    type: int
+                        IntegerLiteral    value: 5    type: int

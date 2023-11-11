@@ -1,0 +1,69 @@
+program
+    Sequence
+        DeclStmt
+            IdList
+                Id    name: n    scope: 0    type: int
+        FunctionDefine    function name: main    type: int()
+            CompoundStmt
+                Sequence
+                    Sequence
+                        Sequence
+                            Sequence
+                                Sequence
+                                    Sequence
+                                        Sequence
+                                            Sequence
+                                                Sequence
+                                                    Sequence
+                                                        Sequence
+                                                            Sequence
+                                                                Sequence
+                                                                    Sequence
+                                                                        DeclStmt
+                                                                            IdList
+                                                                                Id    name: i    scope: 2    type: int
+                                                                        DeclStmt
+                                                                            IdList
+                                                                                Id    name: j    scope: 2    type: int
+                                                                    AssignStmt
+                                                                        Id    name: i    scope: 2    type: int
+                                                                        FuncCall    name: getint    type: int
+                                                                AssignStmt
+                                                                    Id    name: j    scope: 2    type: int
+                                                                    FuncCall    name: getint    type: int
+                                                            DeclStmt
+                                                                IdList
+                                                                    Id    name: temp    scope: 2    type: int
+                                                        AssignStmt
+                                                            Id    name: temp    scope: 2    type: int
+                                                            Id    name: i    scope: 2    type: int
+                                                    AssignStmt
+                                                        Id    name: i    scope: 2    type: int
+                                                        Id    name: j    scope: 2    type: int
+                                                AssignStmt
+                                                    Id    name: j    scope: 2    type: int
+                                                    Id    name: temp    scope: 2    type: int
+                                            SingleStmt
+                                                FuncCall    name: putint    type: void
+                                                    FuncRParams
+                                                        Id    name: i    scope: 2    type: int
+                                        AssignStmt
+                                            Id    name: temp    scope: 2    type: int
+                                            IntegerLiteral    value: 10    type: int
+                                    SingleStmt
+                                        FuncCall    name: putch    type: void
+                                            FuncRParams
+                                                Id    name: temp    scope: 2    type: int
+                                SingleStmt
+                                    FuncCall    name: putint    type: void
+                                        FuncRParams
+                                            Id    name: j    scope: 2    type: int
+                            AssignStmt
+                                Id    name: temp    scope: 2    type: int
+                                IntegerLiteral    value: 10    type: int
+                        SingleStmt
+                            FuncCall    name: putch    type: void
+                                FuncRParams
+                                    Id    name: temp    scope: 2    type: int
+                    ReturnStmt
+                        IntegerLiteral    value: 0    type: int

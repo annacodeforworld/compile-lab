@@ -1,0 +1,32 @@
+program
+    FunctionDefine    function name: main    type: int()
+        CompoundStmt
+            Sequence
+                Sequence
+                    Sequence
+                        DeclStmt
+                            IdList
+                                Id    name: a    scope: 2    type: int
+                        AssignStmt
+                            Id    name: a    scope: 2    type: int
+                            IntegerLiteral    value: 10    type: int
+                    IfElseStmt
+                        SingleExpr    op: positive
+                            SingleExpr    op: negative
+                                SingleExpr    op: anti
+                                    SingleExpr    op: anti
+                                        SingleExpr    op: anti
+                                            Id    name: a    scope: 2    type: int
+                        CompoundStmt
+                            AssignStmt
+                                Id    name: a    scope: 2    type: int
+                                SingleExpr    op: negative
+                                    SingleExpr    op: negative
+                                        SingleExpr    op: negative
+                                            IntegerLiteral    value: 1    type: int
+                        CompoundStmt
+                            AssignStmt
+                                Id    name: a    scope: 2    type: int
+                                IntegerLiteral    value: 0    type: int
+                ReturnStmt
+                    Id    name: a    scope: 2    type: int

@@ -1,0 +1,86 @@
+program
+    Sequence
+        FunctionDefine    function name: fsqrt    type: int()
+            FuncFParams
+                FuncFParam    name:a    scope:1    type:int
+            CompoundStmt
+                Sequence
+                    Sequence
+                        Sequence
+                            Sequence
+                                DeclStmt
+                                    IdList
+                                        Id    name: x0    scope: 2    type: int
+                                        AssignStmt
+                                            Id    name: x0    scope: 2    type: int
+                                            IntegerLiteral    value: 0    type: int
+                                DeclStmt
+                                    IdList
+                                        Id    name: x1    scope: 2    type: int
+                            AssignStmt
+                                Id    name: x1    scope: 2    type: int
+                                BinaryExpr    op: div
+                                    Id    name: a    scope: 1    type: int
+                                    IntegerLiteral    value: 2    type: int
+                        WhileStmt
+                            BinaryExpr    op: noequal
+                                BinaryExpr    op: sub
+                                    Id    name: x0    scope: 2    type: int
+                                    Id    name: x1    scope: 2    type: int
+                                IntegerLiteral    value: 0    type: int
+                            CompoundStmt
+                                Sequence
+                                    Sequence
+                                        AssignStmt
+                                            Id    name: x0    scope: 2    type: int
+                                            Id    name: x1    scope: 2    type: int
+                                        AssignStmt
+                                            Id    name: x1    scope: 2    type: int
+                                            BinaryExpr    op: add
+                                                Id    name: x0    scope: 2    type: int
+                                                BinaryExpr    op: div
+                                                    Id    name: a    scope: 1    type: int
+                                                    Id    name: x0    scope: 2    type: int
+                                    AssignStmt
+                                        Id    name: x1    scope: 2    type: int
+                                        BinaryExpr    op: div
+                                            Id    name: x1    scope: 2    type: int
+                                            IntegerLiteral    value: 2    type: int
+                    ReturnStmt
+                        Id    name: x1    scope: 2    type: int
+        FunctionDefine    function name: main    type: int()
+            CompoundStmt
+                Sequence
+                    Sequence
+                        Sequence
+                            Sequence
+                                Sequence
+                                    Sequence
+                                        Sequence
+                                            DeclStmt
+                                                IdList
+                                                    Id    name: a    scope: 2    type: int
+                                            AssignStmt
+                                                Id    name: a    scope: 2    type: int
+                                                IntegerLiteral    value: 400    type: int
+                                        DeclStmt
+                                            IdList
+                                                Id    name: res    scope: 2    type: int
+                                    AssignStmt
+                                        Id    name: res    scope: 2    type: int
+                                        FuncCall    name: fsqrt    type: int()
+                                            FuncRParams
+                                                Id    name: a    scope: 2    type: int
+                                SingleStmt
+                                    FuncCall    name: putint    type: void
+                                        FuncRParams
+                                            Id    name: res    scope: 2    type: int
+                            AssignStmt
+                                Id    name: res    scope: 2    type: int
+                                IntegerLiteral    value: 10    type: int
+                        SingleStmt
+                            FuncCall    name: putch    type: void
+                                FuncRParams
+                                    Id    name: res    scope: 2    type: int
+                    ReturnStmt
+                        IntegerLiteral    value: 0    type: int

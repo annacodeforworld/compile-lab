@@ -1,0 +1,97 @@
+program
+    FunctionDefine    function name: main    type: int()
+        CompoundStmt
+            Sequence
+                Sequence
+                    Sequence
+                        Sequence
+                            Sequence
+                                Sequence
+                                    Sequence
+                                        Sequence
+                                            Sequence
+                                                Sequence
+                                                    Sequence
+                                                        Sequence
+                                                            Sequence
+                                                                Sequence
+                                                                    DeclStmt
+                                                                        IdList
+                                                                            Id    name: a    scope: 2    type: int
+                                                                    DeclStmt
+                                                                        IdList
+                                                                            Id    name: b    scope: 2    type: int
+                                                                DeclStmt
+                                                                    IdList
+                                                                        Id    name: c    scope: 2    type: int
+                                                            DeclStmt
+                                                                IdList
+                                                                    Id    name: d    scope: 2    type: int
+                                                        DeclStmt
+                                                            IdList
+                                                                Id    name: result    scope: 2    type: int
+                                                    AssignStmt
+                                                        Id    name: a    scope: 2    type: int
+                                                        IntegerLiteral    value: 5    type: int
+                                                AssignStmt
+                                                    Id    name: b    scope: 2    type: int
+                                                    IntegerLiteral    value: 5    type: int
+                                            AssignStmt
+                                                Id    name: c    scope: 2    type: int
+                                                IntegerLiteral    value: 1    type: int
+                                        AssignStmt
+                                            Id    name: d    scope: 2    type: int
+                                            SingleExpr    op: negative
+                                                IntegerLiteral    value: 2    type: int
+                                    AssignStmt
+                                        Id    name: result    scope: 2    type: int
+                                        BinaryExpr    op: sub
+                                            BinaryExpr    op: add
+                                                BinaryExpr    op: div
+                                                    BinaryExpr    op: mul
+                                                        Id    name: d    scope: 2    type: int
+                                                        IntegerLiteral    value: 1    type: int
+                                                    IntegerLiteral    value: 2    type: int
+                                                BinaryExpr    op: sub
+                                                    Id    name: a    scope: 2    type: int
+                                                    Id    name: b    scope: 2    type: int
+                                            BinaryExpr    op: mod
+                                                SingleExpr    op: negative
+                                                    BinaryExpr    op: add
+                                                        Id    name: c    scope: 2    type: int
+                                                        IntegerLiteral    value: 3    type: int
+                                                IntegerLiteral    value: 2    type: int
+                                SingleStmt
+                                    FuncCall    name: putint    type: void
+                                        FuncRParams
+                                            Id    name: result    scope: 2    type: int
+                            AssignStmt
+                                Id    name: result    scope: 2    type: int
+                                BinaryExpr    op: sub
+                                    BinaryExpr    op: add
+                                        BinaryExpr    op: add
+                                            BinaryExpr    op: mod
+                                                Id    name: d    scope: 2    type: int
+                                                IntegerLiteral    value: 2    type: int
+                                            IntegerLiteral    value: 67    type: int
+                                        SingleExpr    op: negative
+                                            BinaryExpr    op: sub
+                                                Id    name: a    scope: 2    type: int
+                                                Id    name: b    scope: 2    type: int
+                                    SingleExpr    op: negative
+                                        BinaryExpr    op: mod
+                                            BinaryExpr    op: add
+                                                Id    name: c    scope: 2    type: int
+                                                IntegerLiteral    value: 2    type: int
+                                            IntegerLiteral    value: 2    type: int
+                        AssignStmt
+                            Id    name: result    scope: 2    type: int
+                            BinaryExpr    op: add
+                                Id    name: result    scope: 2    type: int
+                                IntegerLiteral    value: 3    type: int
+                    SingleStmt
+                        FuncCall    name: putint    type: void
+                            FuncRParams
+                                Id    name: result    scope: 2    type: int
+                ReturnStmt
+                    IntegerLiteral    value: 0    type: int

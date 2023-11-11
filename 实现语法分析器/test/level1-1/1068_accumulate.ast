@@ -1,0 +1,43 @@
+program
+    FunctionDefine    function name: main    type: int()
+        CompoundStmt
+            Sequence
+                Sequence
+                    Sequence
+                        Sequence
+                            Sequence
+                                Sequence
+                                    DeclStmt
+                                        IdList
+                                            Id    name: i    scope: 2    type: int
+                                    DeclStmt
+                                        IdList
+                                            Id    name: sum    scope: 2    type: int
+                                AssignStmt
+                                    Id    name: sum    scope: 2    type: int
+                                    IntegerLiteral    value: 0    type: int
+                            AssignStmt
+                                Id    name: i    scope: 2    type: int
+                                IntegerLiteral    value: 0    type: int
+                        WhileStmt
+                            BinaryExpr    op: less
+                                Id    name: i    scope: 2    type: int
+                                IntegerLiteral    value: 21    type: int
+                            CompoundStmt
+                                Sequence
+                                    AssignStmt
+                                        Id    name: sum    scope: 2    type: int
+                                        BinaryExpr    op: add
+                                            Id    name: sum    scope: 2    type: int
+                                            Id    name: i    scope: 2    type: int
+                                    AssignStmt
+                                        Id    name: i    scope: 2    type: int
+                                        BinaryExpr    op: add
+                                            Id    name: i    scope: 2    type: int
+                                            IntegerLiteral    value: 1    type: int
+                    SingleStmt
+                        FuncCall    name: putint    type: void
+                            FuncRParams
+                                Id    name: sum    scope: 2    type: int
+                ReturnStmt
+                    IntegerLiteral    value: 0    type: int
